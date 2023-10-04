@@ -67,8 +67,21 @@ input::placeholder{
 	margin-top:2px;
 	padding: 5px 15px;
 }
+#clear-button {
+	display: inline;
+	justify-content: right;
+	align-self: center;
+	width: 40px;
+	height: 40px;
+	align-items: right;
+	background-color:#5a0b0d;
+	color:#ffffff;
+	border-radius: 5px;
+	margin-top:2px;
+	padding: 5px 15px;
+}
 
-#button:hover{
+#button:hover, #clear-button:hover {
 	cursor: pointer;
 	opacity: .8;}
 
@@ -101,13 +114,9 @@ ol .fa-square-check {
 	color: green;
 }
 
-ol li:nth-child(even){
-	background: #dfdfdf;
-}
-
 .strike {
 	text-decoration: line-through;
-	background-color: green;
+	background-color: lightgreen;
 }
 
 li:hover {

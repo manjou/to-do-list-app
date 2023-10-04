@@ -1,36 +1,41 @@
 $(document).ready(function() {
 
 
-  // click button adds an to-do item
+// adding a new item when button is clicked
   $('#button').click(function() {
     let item = $('#input').val();
     $('ol').append('<li>' + item + '<i class="fa-solid fa-square-check"></i> <i class="fa-solid fa-trash"></i>' + '</li>');
   });
-
+// Adding a new item with the enter key
   $('#input').on('keypress', function(event) {
     if (event.keyCode === 13) {
       event.preventDefault();
       let item = $('#input').val();
       $('ol').append('<li>' + item + '<i class="fa-solid fa-square-check"></i> <i class="fa-solid fa-trash"></i>' + '</li>');
     }
-    });
+  });
+// clearing the input field when CLEAR button is clicked
+$('#clear-button').click(function() {
+  $('#input').val('');
+});
 
+// 2. deleting an item from the list of items:
   $('ol').on('click', '.fa-trash', function() {
     $(this).parent('li').fadeOut(200);
   });
 
+// 3. Crossing out an item from the list of items:
+// i. with a click on the trash icon
   $('ol').on('click', '.fa-square-check', function() {
     $(this).parent('li').toggleClass('strike');
   });
-
+// ii. with a double click on the item
   $(document).on('dblclick', 'li', function() {
     $(this).parent('li').toggleClass('strike');
   });
 
-
-  // 4. Reordering the items:
+// 4. Reordering the items:
   $('#list').sortable();
-
 
 });
 
