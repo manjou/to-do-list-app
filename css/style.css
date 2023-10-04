@@ -1,70 +1,116 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
 
+* {
+	box-sizing: border-box;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
-font: normal normal 13px/16px "Open Sans", sans-serif;
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-self: center;
-background: linear-gradient(45deg, #ff0 50%, #333 50%);
+	min-height: 100vh;
+	background: linear-gradient(45deg, #ff0 50%, #333 50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 
 .container{
-	height: 450px;
-padding: 20px;
-width: 330px;
-margin: 0 auto;
-margin-top: 40px;
-background: #fff;
-border-radius: 5px;
-box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-overflow-y: auto;}
+	display: inline-block;
+	height: 750px;
+	padding: 10px;
+	width: 450px;
+	margin: 20px;
+	margin-top: 40px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+	overflow-y: auto;
+}
 
 
 form {
-display: inline-block;
+	display: inline-block;
 }
 
 input{
-padding: 4px 15px 4px 5px;
-margin: 15px 0;
-height: 50px;
-width: 100%;
-outline: none;
-border-radius: 5px;
-background-color: #666;
-color: #fff;
+	display: inline;
+	padding: 0 10px;
+	margin: 15px 0;
+	height: 40px;
+	width: 250px;
+	outline: none;
+	border-radius: 5px;
+	background-color: #666;
+	color: #fff;
 }
 
 input::placeholder{
 	color: #bbb;
+	font-size: 0.6rem;
 }
 
 #button{
-display: inline-block;
-background-color:#fc999b;
-color:#ffffff;
-border-radius: 5px;
-text-align:center;
-margin-top:2px;
-padding: 5px 15px;
+	display: inline;
+	justify-content: right;
+	align-self: center;
+	width: 40px;
+	height: 40px;
+	align-items: right;
+	background-color:#fc999b;
+	color:#ffffff;
+	border-radius: 5px;
+	margin-top:2px;
+	padding: 5px 15px;
 }
 
 #button:hover{
-cursor: pointer;
-opacity: .8;}
+	cursor: pointer;
+	opacity: .8;}
 
-ol {padding-left: 20px;}
+ol {
+	padding-left: 20px;
+}
 
-ol li {padding: 5px;color:#000;}
+ol li {
+	height: 40px;
+	padding: 10px;
+	background-color: #eee;
+	color:#333;
+	border-radius: 20px;
+	margin: 10px 0;
+	position: relative;
+}
 
-ol li:nth-child(even){background: #dfdfdf;}
+ol .fa-square-check, .fa-trash {
+	position: absolute;
+	cursor: pointer;
+}
 
-.strike{text-decoration: line-through;}
+ol .fa-trash {
+	right: 15px;
+	color: #ff0033;
+}
 
-li:hover{
+ol .fa-square-check {
+	right: 40px;
+	color: green;
+}
+
+ol li:nth-child(even){
+	background: #dfdfdf;
+}
+
+.strike {
+	text-decoration: line-through;
+	background-color: green;
+}
+
+li:hover {
   cursor: pointer;
  }
 
